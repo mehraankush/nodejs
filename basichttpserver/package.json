@@ -1,0 +1,19 @@
+{
+  "name": "firstserver",
+  "version": "1.0.0",
+  "description": "my first server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehraankush/nodejs.git"
+  },
+  "author": "mehra_ankush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehraankush/nodejs/issues"
+  },
+  "homepage": "https://github.com/mehraankush/nodejs#readme"
+}
