@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <!-- = is used to print something -->
+        <title><%= title %> </title> 
+    </head>
+    <body>
+        <h1>remdering through ejs</h1>
+        <div>
+            <ul>
+            <% for(let i of contact_List) { %>
+               <p><li> <%= i.name %></li> </p>
+                <p><li> <%= i.phone %></li></p>
+            <%}%>
+            </ul>
+        </div>
+      <form action="/contact_list" method="post">
+           <input type="text" name="name"  placeholder="name" required>
+           <input type="number" name="phone"  placeholder="phone no" required>
+           <button>add contact</button>
+      </form>
+    </body>
+</html>
