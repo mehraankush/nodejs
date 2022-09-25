@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <!-- locals is a globle key to access variabes -->
+        <title> <%= locals.title %> </title>
+    </head>
+    <body>
+        <h1>playground</h1>
+        <ul>
+            <% for(let i=0;i<10;i++){ %>
+                <li>
+                    <%= i %>
+                </li>
+                <%}%>
+
+                <% if(true) {%>
+                    <h1>it's true</h1>
+                <% } else{ %>
+                    <h1>it's false</h1>
+                <% } %>
+        </ul>
+    </body>
+</html>
