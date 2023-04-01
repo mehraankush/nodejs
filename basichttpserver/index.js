@@ -1,18 +1,39 @@
-const http= require('http');
+const http = require('http');
 const port = 8000;
+const fs = require('fs');
 
-function requestHandler(reg,res){
-  
-    console.log(reg.url);
 
-  res.end('Gotcha!');
+function requestHandler(req,res){
+    console.log(req.url);
+    res.writeHeader(200,{'content-type':'text/html'});
+
+    let filePath;
+
+    switch(req.url){
+        case '/':
+            filePath='./index.html';
+            break;
+        case '/profile':
+            filePath = './profile.html';
+            break;
+        default:
+            filePath = './404.html';
+    }
+
+    fs.readFile(filePath,function(err,data){
+        if(err){
+            console.log('Error ',err);
+            return res.end('<h1>Error</h1>');
+        }
+        return res.end(data);
+    });
 }
 const server = http.createServer(requestHandler);
-//first argument always refers to the  error 
+
 server.listen(port,function(err){
     if(err){
         console.log(err);
-        return;
+        return ;
     }
-    console.log('server is up and runnung');
+    console.log('server is up and running');
 });

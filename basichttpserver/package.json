@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mehraankush/nodejs/issues"
   },
-  "homepage": "https://github.com/mehraankush/nodejs#readme"
+  "homepage": "https://github.com/mehraankush/nodejs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
