@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <title>
+        <!-- variables which is acceses in templetes are called locals -->
+        <!-- locals is a globla objects  -->
+          <%= locals.title%>
+       </title>
+    </head>
+    <body>
+        <h1>Practice</h1>
+        <%for(let i=0;i<6;i++){%>
+            <ul>
+                <li>
+                    <%=i%>
+                </li>
+            </ul>
+        <%}%>
+        <%for(let i of contect_List){%>
+            <ul>
+                <li>
+                    <%=i.name%>
+                    <%=i.phone%>
+                    <div>
+                        <a href="/delete/?phone=<%=i.phone %>&name=<%=i.name %>">
+                            <p>del</p>
+                         </a> 
+                    </div> 
+                </li>
+            </ul>
+        <%}%>
+
+        <%if(true){%>
+            <h1>It's true</h1>
+        <%}else{%>
+            <h1>Wrong</h1>
+        <%}%>
+        
+    </body>
+</html>

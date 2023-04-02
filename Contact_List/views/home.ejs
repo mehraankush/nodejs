@@ -1,0 +1,32 @@
+<html>
+    <head>
+       <title>
+          <%= title%>
+       </title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="/css/home.css"/>
+    <body>
+        <h1>Add your contack list</h1>
+        <%for(let i of contect_List){%>
+            <ul>
+                <li>
+                    <div>
+                    <%=i.name%>
+                    <%=i.Phone%>
+                    
+                        <a href="/delete/?phone=<%=i.phone %>&name=<%=i.name %>&id=<%= i._id%>">
+                            <p>X</p>
+                         </a> 
+                    </div> 
+                </li>
+            </ul>
+        <%}%>
+        
+        <form action="/action" method="POST">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="Phone" placeholder="Phone Number" required>
+            <button type="submit">Add</button>
+        </form>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
